@@ -21,10 +21,9 @@ class Results extends Component {
 const mapStateToProps = (state) => {
   return {
     suggestions: state.suggestions,
+    hola: '123'
   }
 }
 
-const wrapper = connect(mapStateToProps) 
-const component = wrapper(Results)
 
-export default component
+export default connect(mapStateToProps)(Results)
