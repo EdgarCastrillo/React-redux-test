@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import Page from './page'
 
-class Details extends Component {
+
+class Results extends Component {
   render() {
+
+    const { suggestions } = this.props
+    
+    console.log(suggestions)
+
     return (
       <div>
         <Page />
@@ -11,5 +18,13 @@ class Details extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    suggestions: state.suggestions,
+  }
+}
 
-export default Details
+const wrapper = connect(mapStateToProps) 
+const component = wrapper(Results)
+
+export default component

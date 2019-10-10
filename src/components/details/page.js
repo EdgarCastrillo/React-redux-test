@@ -4,7 +4,7 @@ export default function page() {
   return (
     <div>
       <Fragment>
-        Results
+        Details
       </Fragment>
     </div>
   )
