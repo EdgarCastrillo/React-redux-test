@@ -21,9 +21,7 @@ class Results extends Component {
 const mapStateToProps = (state) => {
   return {
     suggestions: state.suggestions,
-    hola: '123'
   }
 }
-
 
 export default connect(mapStateToProps)(Results)

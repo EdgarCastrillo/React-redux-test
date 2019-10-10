@@ -1,18 +1,30 @@
 import React from 'react';
-import AppBar from '@material-iu/core/AppBar'
-import ToolBar from '@material-iu/core/ToolBar'
-import Typography from '@material-iu/core/Typography'
-import AccountCircle from '@material-iu/core/AccountCircle'
-
+import AppBar from '@material-ui/core/AppBar'
+import ToolBar from '@material-ui/core/ToolBar'
+import Typography from '@material-ui/core/Typography'
+import AccountCircle from '@material-ui/icons/AccountCircle'
+import Autocomplete from '../autocomplete'
 
 function Page(props) {
+  const {
+    text,
+    suggestions,
+    onChangeText,
+    onChangeSelection,
+  } = props
+  
   return (
     <AppBar position="static">
       <ToolBar className="appbar">
         <Typography variant="h6" color="inherit">
-          Programax
+          Redux
         </Typography>
-
+        <Autocomplete 
+          text={text}
+          suggestions={suggestions}
+          onChangeText={onChangeText}
+          onChangeSelection={onChangeSelection}
+        />
         <AccountCircle />
       </ToolBar>
     </AppBar>
